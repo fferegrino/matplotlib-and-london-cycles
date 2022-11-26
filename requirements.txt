@@ -1,0 +1,7 @@
+click
+geopandas
+matplotlib
+numpy
+pandas
+pytz
+seaborn
