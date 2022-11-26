@@ -12,7 +12,7 @@ def main(month, sample):
     if sample:
         selected = selected.sample(sample, random_state=42)
     print(selected)
-    create_plot(selected, out="out/map.png")
+    create_plot(selected, out="out/map.png", figsize=(8, 6), dpi=200)
 
 
 if __name__ == "__main__":
