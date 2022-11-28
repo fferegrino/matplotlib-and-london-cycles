@@ -1,19 +1,13 @@
 import click
-from datetime import datetime
 from plot import create_plot
-from read import read_stations
-import pytz
-
-london_tz = pytz.timezone("Europe/London")
+import pandas as pd
 
 
 @click.command()
+@click.argument("month")
 @click.option("--sample", type=int, required=False, default=0)
-def main(sample):
-    beginning = datetime(2022, 11, 7, tzinfo=london_tz)
-    end = datetime(2022, 11, 14, tzinfo=london_tz)
-    data = read_stations(beginning, end)
-
+def main(month, sample):
+    data = pd.read_csv(f"data/{month}.csv", parse_dates=["query_time"])
     selected = data[data["query_time"] == data["query_time"].min()]
     if sample:
         selected = selected.sample(sample, random_state=42)
