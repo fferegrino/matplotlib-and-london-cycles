@@ -26,7 +26,7 @@ def plot_station_usage(data, fig, ax):
     ax.fill_between([lons[0], lons[1]], lats[0], lats[1], color="#81B9E3")
 
     # Draw map
-    london_map = gpd.read_file("london-cycles-db/shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
+    london_map = gpd.read_file("shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
     london_map.plot(ax=ax, color="#F4F6F7", edgecolor="black", linewidth=0.5)
 
     # Main drawing method
@@ -52,7 +52,7 @@ def plot_station_usage(data, fig, ax):
 def plot_station_usage_v5(data, fig, ax):
 
     # Draw map
-    london_map = gpd.read_file("london-cycles-db/shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
+    london_map = gpd.read_file("shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
     london_map.plot(ax=ax, color="#F4F6F7", edgecolor="black", linewidth=0.5)
 
     # Main drawing method
@@ -80,7 +80,7 @@ def plot_station_usage_v5(data, fig, ax):
 def plot_station_usage_v4(data, fig, ax):
 
     # Draw map
-    london_map = gpd.read_file("london-cycles-db/shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
+    london_map = gpd.read_file("shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
     london_map.plot(ax=ax, color="#F4F6F7", edgecolor="black", linewidth=0.5)
 
     # Main drawing method
@@ -97,7 +97,7 @@ def plot_station_usage_v4(data, fig, ax):
 def plot_station_usage_v3(data, fig, ax):
 
     # Draw map
-    london_map = gpd.read_file("london-cycles-db/shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
+    london_map = gpd.read_file("shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
     london_map.plot(ax=ax)
 
     # Main drawing method
@@ -114,7 +114,7 @@ def plot_station_usage_v3(data, fig, ax):
 def plot_station_usage_v2(data, fig, ax):
 
     # Draw map
-    london_map = gpd.read_file("london-cycles-db/shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
+    london_map = gpd.read_file("shapefiles/London_Borough_Excluding_MHW.shp").to_crs(epsg=4326)
     london_map.plot(ax=ax)
 
     # Main drawing method
