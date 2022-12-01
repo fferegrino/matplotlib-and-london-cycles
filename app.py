@@ -7,7 +7,7 @@ import pandas as pd
 @click.argument("month")
 @click.option("--sample", type=int, required=False, default=0)
 def main(month, sample):
-    data = pd.read_csv(f"data/{month}.csv", parse_dates=["query_time"])
+    data = pd.read_csv(f"data/{month}.csv.gz", parse_dates=["query_time"])
     selected = data[data["query_time"] == data["query_time"].min()]
     if sample:
         selected = selected.sample(sample, random_state=42)
